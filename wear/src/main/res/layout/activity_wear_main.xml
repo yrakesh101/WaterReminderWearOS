@@ -44,14 +44,14 @@
                     android:id="@+id/addWaterButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/add_water"
-                    android:layout_marginBottom="@dimen/wear_margin" />
+                    android:layout_marginBottom="@dimen/wear_margin"
+                    android:text="@string/add_water" />
 
                 <Button
                     android:id="@+id/startReminderButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/start_reminders" />
+                    android:text="@string/start_reminders"  />
 
             </LinearLayout>
         </ScrollView>
