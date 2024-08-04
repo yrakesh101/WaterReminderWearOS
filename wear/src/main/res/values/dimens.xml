@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="box_inset_layout_padding">10dp</dimen>
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+    <dimen name="wear_title_text_size">16sp</dimen>
+    <dimen name="wear_water_intake_text_size">24sp</dimen>
+    <dimen name="wear_margin">8dp</dimen>
+</resources>

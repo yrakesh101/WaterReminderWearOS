@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WaterIntakeTracker</string>
+    <string name="water_intake_tracker">Water Intake Tracker</string>
+    <string name="add_water">Add Water</string>
+    <string name="sync_data">Sync Data</string>
+    <string name="start_reminders">Start Reminders</string>
+</resources>
