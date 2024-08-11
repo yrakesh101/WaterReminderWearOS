@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">WaterIntakeTracker</string>
     <string name="water_intake_tracker">Water Intake Tracker</string>
+    <string name="water_intake_record">Water Intake Record</string>
     <string name="add_water">Add Water</string>
+    <string name="query_water">Query</string>
     <string name="sync_data">Sync Data</string>
     <string name="start_reminders">Start Reminders</string>
+    <string name="query_date">Please Select Date</string>
+    <string name="record_time">Record Time</string>
+    <string name="record_amount">Record Amount</string>
 </resources>

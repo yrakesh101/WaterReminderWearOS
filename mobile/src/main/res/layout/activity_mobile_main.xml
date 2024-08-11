@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,28 +17,88 @@
         app:layout_constraintBottom_toTopOf="@+id/waterIntakeText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261" />
 
     <TextView
         android:id="@+id/waterIntakeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/water_intake_text_size"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recordwaterText"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:text="1000 ml" />
+
+    <TextView
+        android:id="@+id/recordwaterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/water_intake_record"
+        android:textSize="@dimen/water_intake_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/listRecordRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/waterIntakeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRecordRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/spn_text_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/querylayout"
+        app:layout_constraintTop_toBottomOf="@+id/waterIntakeText" />
+
+    <LinearLayout
+        android:id="@+id/querylayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/addWaterButton"
+        app:layout_constraintTop_toBottomOf="@+id/listRecordRecyclerView">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dataquerytext"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/dark_grey">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/selectedDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/query_date"
+                android:editable="false"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/querywaterbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/query_water"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/addWaterButton"
+            app:layout_constraintTop_toBottomOf="@+id/dataquerytext" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/addWaterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_water"
-        app:layout_constraintBottom_toTopOf="@+id/syncButton"
+        android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/waterIntakeText" />
+        app:layout_constraintBottom_toTopOf="@+id/syncButton"
+        app:layout_constraintTop_toBottomOf="@+id/querylayout" />
 
     <Button
         android:id="@+id/syncButton"
