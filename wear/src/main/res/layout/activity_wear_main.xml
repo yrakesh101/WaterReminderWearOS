@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:padding="@dimen/box_inset_layout_padding"
     tools:context=".activities.WearMainActivity"
+    android:background="@color/background"
     tools:deviceIds="wear">
 
     <FrameLayout
@@ -29,29 +30,46 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/water_intake_tracker"
-                    android:textSize="@dimen/wear_title_text_size"
-                    android:layout_marginBottom="@dimen/wear_margin" />
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/wear_title_text_size" />
 
                 <TextView
                     android:id="@+id/waterIntakeText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/wear_water_intake_text_size"
+                    android:textColor="@color/text_primary"
+                    tools:text="1000" />
+
+                <TextView
+                    android:id="@+id/millilitersText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/wear_margin"
-                    tools:text="1000 ml" />
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    tools:text="ml" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/addWaterButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="103dp"
+                    android:layout_height="26dp"
+                    android:layout_marginBottom="@dimen/wear_margin"
+                    android:background="@drawable/btn2_background"
                     android:text="@string/add_water"
-                    android:layout_marginBottom="@dimen/wear_margin" />
+                    android:textSize="16sp"
+                    android:textStyle="bold"
 
-                <Button
+                    tools:ignore="TouchTargetSizeCheck" />
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/startReminderButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/start_reminders" />
+                    android:layout_width="103dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/btn_background"
+                    android:text="@string/start_reminders"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
         </ScrollView>

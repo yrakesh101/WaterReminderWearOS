@@ -3,7 +3,19 @@
     <color name="primary">#2196F3</color>
     <color name="primary_dark">#1976D2</color>
     <color name="accent">#03A9F4</color>
-    <color name="background">#FFFFFF</color>
-    <color name="text_primary">#212121</color>
+    <color name="background">#191918</color>
+    <color name="text_primary">#CC2EEF</color>
     <color name="text_secondary">#757575</color>
+    <color name="wear_background_color">#1A237E</color>
+    <color name="wear_primary_text_color">#FFFFFF</color>
+    <color name="wear_secondary_text_color">#90CAF9</color>
+    <color name="wear_button_color">#42A5F5</color>
+    <color name="wear_button_color_secondary">#FF7043</color>
+    <color name="wear_button_text_color">#FFFFFF</color>
+    <color name="col1">#c58af9</color>
+    <color name="col2">#4CAF50</color>
+    <color name="col3">#109bdc</color>"
+    <color name="col4">#d9a985</color>
+    <color name="black">#000000</color>
+
 </resources>
