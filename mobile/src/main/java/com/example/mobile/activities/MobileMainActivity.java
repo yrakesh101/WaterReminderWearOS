@@ -211,7 +211,14 @@ public class MobileMainActivity extends AppCompatActivity implements DataClient.
             datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int day) {
-                    binding.selectedDate.setText(year + "-" + (month+1) + "-" + day);
+                    int intMonth = month + 1;
+                    String finalMonth;
+                    if(intMonth >= 10) {
+                        finalMonth = String.valueOf(intMonth);
+                    } else {
+                        finalMonth = "0" + String.valueOf(intMonth);
+                    }
+                    binding.selectedDate.setText(year + "-" + finalMonth + "-" + day);
                 }
             }, yearOfSales, monthOfSales, dayOfSales);
             datePickerDialog.show();
