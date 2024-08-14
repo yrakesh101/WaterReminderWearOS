@@ -62,6 +62,7 @@
                     android:textStyle="bold"
 
                     tools:ignore="TouchTargetSizeCheck" />
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/startReminderButton"
                     android:layout_width="103dp"
@@ -69,7 +70,8 @@
                     android:background="@drawable/btn_background"
                     android:text="@string/start_reminders"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
         </ScrollView>
